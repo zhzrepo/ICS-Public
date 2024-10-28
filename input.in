@@ -1,0 +1,48 @@
+[Electron]
+E_e = 47                   // electron beam energy (MeV)
+sigE_e = 0.003              // Relative rms energy spread of E_e
+nE_e = 5.0                  // Gaussian taill cutoff 
+sigX_e = 30                 // rms size in X direction (um)
+sigY_e = 30                 // rms size in Y direction (um)
+sigZ_e = 10                  // pulse length (ps)
+nX_e = 5                    // Gaussian taill cutoff
+nY_e = 5                    // Gaussian taill cutoff
+nZ_e = 5                    // Gaussian taill cutoff
+emitX = 1.5                 // normalized rms emittance in X direction (mm*mrad)
+emitY = 1.5                 // normalized rms emittance in Y direction (mm*mrad)
+alphaX = 0                  // twiss parameter alpha of electron in X
+alphaY = 0                  // twiss parameter alpha of electron in Y
+beamCharge = 200            // electron beam charge (pC)
+
+
+[Laser]
+WL = 800                    // wave length (nm)
+sigWL = 0.02                 // Relative rms spread of wave length 
+nWL_L = 5                   // Gaussian taill cutoff 
+sigX_L = 10                 // rms size of waist in X direction (um)
+sigY_L = 10                 // rms size of waist in Y direction (um)
+sigZ_L = 0.1                 // pulse length (ps)
+pulseEnergy = 0.8           // the energy of the laser pulse (J)
+
+// When S1^2 + S2^2 + S3^3 < 1, the photon is partial polarization
+S1 = 0                      // stokes parameters S1, +1 represents the 45*dgree polarization, -1 represents the -45*dgree polarization
+S2 = 0                      // stokes parameters S2, +1/-1 represent circular polarization
+S3 = 1                      // stokes parameters S3, +1 represents the horrizontal polarization, -1 represents the vertical polarization
+
+
+
+[Setup]
+// Set the position (X0, Y0, Z0) of the interaction point (IP) and the interacting angle 
+X0 = 0                      // the position X0 of the IP
+Y0 = 0                      // the position Y0 of the IP
+Z0 = 0                      // the position Z0 of the IP
+e_i = 180                   // colliding angle between the laser and the electron beam (deg)
+Mode = 2                    // See Appendix
+nSteps = 501                // Since the time of interaction is divided into equal steps, nSteps is the number of the steps.
+
+// Appendix
+// Place the 'input.in' file and the program in the same directory.
+// The simulation has two modes, Mode1 and Mode2: 
+//  - Mode1, generates N photons following the inverse Compton scattering distribution.
+//  - Mode2, simulates N macro electron particles, allowing estimation of X/gamma photon production.
+// The number of macro particles is the number of event.
