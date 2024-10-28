@@ -4,3 +4,4 @@ To use this class, please include the following files in your project:
 1. `PrimaryGeneratorAction.hh`
 2. `PrimaryGeneratorAction.cc`
 3. `Vector3D.hh`
+4. `input.in`
