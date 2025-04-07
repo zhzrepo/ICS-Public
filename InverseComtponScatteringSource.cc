@@ -89,7 +89,7 @@ InverseComtponScatteringSource::InverseComtponScatteringSource()
         // -------------------------------------------------------------
 
         // --------------------- inverse Compton scattering ----------------------
-        pos0 = Vector3D(getConfigValue("Setup", "X0"), getConfigValue("Setup", "Y0"), getConfigValue("Setup", "Z0")); // the position of the IP
+        pos0 = Vector3D(getConfigValue("Setup", "X0")*m, getConfigValue("Setup", "Y0")*m, getConfigValue("Setup", "Z0")*m); // the position of the IP
         e_i = getConfigValue("Setup", "e_i") * deg; // colliding angle between the laser and the electron beam
         Mode = getConfigValue("Setup", "Mode"); // simulating mode
         nSteps = getConfigValue("Setup", "nSteps"); // Since the time of interaction is divided into equal steps, nSteps is the number of the steps

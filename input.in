@@ -33,9 +33,9 @@ S3 = 1                      // stokes parameters S3, +1 represents the horrizont
 
 [Setup]
 // Set the position (X0, Y0, Z0) of the interaction point (IP) and the interacting angle 
-X0 = 0                      // the position X0 of the IP
-Y0 = 0                      // the position Y0 of the IP
-Z0 = 0                      // the position Z0 of the IP
+X0 = 0                      // the position X0 of the IP (m)
+Y0 = 0                      // the position Y0 of the IP (m)
+Z0 = 0                      // the position Z0 of the IP (m)
 e_i = 180                   // colliding angle between the laser and the electron beam (deg)
 Mode = 2                    // See Appendix
 nSteps = 501                // Since the time of interaction is divided into equal steps, nSteps is the number of the steps.
