@@ -118,7 +118,7 @@ InverseComtponScatteringSource::InverseComtponScatteringSource()
         tau = Tau(S1, S2, S3); // Determine the orientation angle tau based on the degree of circular polarization
 
         // Calculate the range of time t
-        rangeT = 5 * sigct_cal(sigX_e, sigZ_e, sigX_L, sigZ_L, beta_beam, e_i);
+        rangeT = nZ_e * sigct_cal(sigX_e, sigZ_e, sigX_L, sigZ_L, beta_beam, e_i);
         nSteps += nSteps % 2 == 0;
         dT = 2 * rangeT / (nSteps - 1);
 
